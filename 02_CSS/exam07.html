@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 구조 선택자 */
+        div.container1 p:first-child{
+            color: peru;
+        }
+        div.container1 p:last-child{
+            color: saddlebrown;
+        }
+        div.container2 p:nth-child(odd){
+            color: salmon;
+        }
+        div.container3 p:nth-of-type(4){
+            color: springgreen;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="container1">
+        <p>1 번째 텍스트</p>
+        <p>2 번째 텍스트</p>
+        <p>3 번째 텍스트</p>
+    </div>
+    <hr>
+    <div class="container2">
+        
+        <p>1 번째 텍스트</p>
+        <p>2 번째 텍스트</p>
+        <p>3 번째 텍스트</p>
+        <p>4 번째 텍스트</p>
+        <p>5 번째 텍스트</p>
+        <p>6 번째 텍스트</p>
+        <p>7 번째 텍스트</p>
+        <p>8 번째 텍스트</p>
+        <p>9 번째 텍스트</p>
+        <p>10 번째 텍스트</p>
+    </div>
+
+    <div class="container3">
+        <p>1번째 텍스트</p>
+        <div>1번째 텍스트</div>
+        <p>2번째 텍스트</p>
+        <div>2번째 텍스트</div>
+        <p>3번째 텍스트</p>
+        <div>3번째 텍스트</div>
+        <p>4번째 텍스트</p>
+        <div>4번째 텍스트</div>
+        <p>5번째 텍스트</p>
+        <div>5번째 텍스트</div>
+    </div>
+</body>
+</html>
