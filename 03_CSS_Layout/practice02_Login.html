@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       *{box-sizing: border-box;}
+       div{border: 1px solid black; text-align: center;}
+       .login{
+           width: 300px;
+           height: 160px;
+       }
+       .login>*{
+           height: 50%;
+       }
+       .login>.box{
+           line-height: 80px;
+       }
+
+       .login>.input{
+           float: left;
+           height: 50%;
+       }
+
+       .login>.input>*{
+           height: 50%;
+           line-height: 35px;
+       }
+       
+       .login>.button{
+           height: 50%;
+           line-height: 80px;
+       }
+       #button{
+           width: 60px;
+           height: 30px;
+       }
+   </style>
+
+</head>
+<body>
+   <div class="login">
+       <div class="box">Login Box</div>
+       <div class="input">
+           <div><input type="text" placeholder="Input your ID"></div>
+           <div><input type="text" placeholder="Input your Password"></div>
+       </div>
+       <div class="button"><input type="button" value="Login" id="button"></div> 
+    </div>
+</body>
+</html>

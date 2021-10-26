@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box; text-align: center;}
+        div{border: 1px solid black;}
+       
+        .container{width: 800px;}
+        .container>.header{height: 100px;}
+        .container>.header>div{float: left;}
+        .header img{width: 100%; height: 100%;}
+        .header>.logo{
+            width: 30%;
+            height: 100%;
+            
+        }
+        .header>.title{
+            width: 70%;
+            height: 100%;
+            margin: 0px;
+        }
+        .container>.navi{
+            height: 40px;
+        }
+        .navi{
+            height: 100%;
+            
+        }
+        .navi>ul{
+            overflow: hidden;
+            margin: 0px;
+            padding: 0px;
+            background-color: orange;
+        }
+
+        .navi>ul>li{
+            float: left;
+            list-style-type: none;
+            width: 25%;
+            line-height: 40px;
+            color: white;
+        }
+
+        .navi>ul>li:hover{
+            background-color: royalblue;
+            cursor: pointer;
+        }
+
+        .container>.body{height: 300px;}
+        .container>.body>div{float: left; }
+        .body>.contents{
+            width: 60%;
+            height: 100%;
+        }
+        .body>.side{
+            width: 40%;
+            height: 100%;
+        }
+        
+        .body>.side>.login{
+            height: 30%;
+        }
+
+        .body>.side>.banner{
+            height: 70%;
+        }
+
+        .body>.side>.login>.id{
+            float: left;
+        }
+
+        .body>.side>.login>.box{
+            line-height: 45px;
+        }
+
+        .body>.side>.login>*{
+            height: 50%;
+           
+        }
+       
+        .body>.side>.login>.id>*{
+            height: 50%;
+            line-height: 16px;
+        }
+        .body>.side>.login>.button{
+            height: 50%;
+            line-height: 38px;
+        }
+        #button{
+            height: 30px;
+            width: 65px;
+        }
+
+        .container>.footer{height: 100px;}
+        .container>.footer>div{float: left;width: 50%;height: 100%;}
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo"><img src="logo4.jpg"></div>
+                
+            <div class="title"><img src="logo.jpg"></div>
+        </div>
+        <div class="navi">
+            <ul>
+                <li class="news"><b>News</b></li>
+                <li class="sports"><b>Sports</b></li>
+                <li class="enter"><b>Entertainment</b></li>
+                <li class="shop"><b>Shopping</b></li>
+            </ul>
+        </div>
+        <div class="body">
+            <div class="contents">contents</div>
+            <div class="side">
+                <div class="login">
+                    <div class="box"><b>Login Box</b></div>
+                    <div class="id">
+                        <div><input type="text" placeholder="Input yout ID"></div>
+                        <div><input type="password" placeholder="Input yout Password"></div>
+                    </div>
+                    <div class="button"><input type="button" value="Login" id="button"></div>
+                </div>
+                <div class="banner">banner</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>left</div>
+            <div>right</div>
+        </div>
+    </div>
+</body>
+</html>

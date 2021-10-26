@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box; text-align: center;}
+        div{border: 1px solid black;}
+        .container{width: 800px;}
+
+        .container>.header{
+            height: 100px;
+        }
+        .container>.header>div{
+            float: left;
+        }
+        .container>.header>.logo{
+            height: 100%;
+            width: 30%;
+        }
+
+        .container>.header>.title{
+            height: 100%;
+            width: 70%;
+        }
+
+        .container>.navi{
+            height: 60px;
+        }
+        .container>.navi>ul{
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            background-color: coral;
+        }
+        .container>.navi>ul>li{
+            float: left;
+            list-style-type: none;
+            width: 25%;
+            height: 100%;
+            line-height: 60px;
+            color: white;
+        }
+        .navi>ul>li:hover{
+            background-color:cadetblue;
+            cursor: pointer;
+        }
+
+        .container>.body{
+            height: 500px;
+        }
+
+        .container>.body>div{
+            float: left;
+           
+        }
+
+        .container>.body>.contents{
+            height: 100%;
+            width: 70%;
+        }
+        .container>.body>.side{
+            height: 100%;
+            width: 30%;
+        }
+        .container>.body>.side>.main{
+            height: 30%;
+        }
+        
+        .main>.login{
+            height: 100%;
+        }
+
+        .main>.login>.box{
+            height: 50%;
+            line-height: 75px;
+        }
+
+        .main>.login>.input, .main>.login>.button{
+            float: left;  
+        }
+
+        .main>.login>.input{
+            height: 50%;
+            width: 50%;
+        }
+        .login>.input>*{
+            height: 50%;
+            width: 100%;
+            line-height: 30px;
+        }
+        .login>.button{
+            height: 50%;
+            width: 50%;
+            line-height: 70px;
+        }
+        #textid, #textpw{
+            width: 100px;
+            
+        }
+
+        #loginbutton{
+            width: 60px;
+            height: 30px;
+        }
+        
+
+        .container>.body>.side>.banner{
+            height: 70%;
+        }
+        .banner{
+            height: 70%;
+        }
+
+        .container>.footer{
+            height: 100px;
+        }
+
+        .container>.footer>div{
+            float: left;
+        }
+        .container>.footer>.left{
+            height: 100%;
+            width: 50%;
+        }
+        .container>.footer>.right{
+            height: 100%;
+            width: 50%;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">logo</div>
+            <div class="title">title</div>
+        </div>
+        <div class="navi"> 
+            <ul>
+                <li class="news"><b>News</b></li>
+                <li class="sports"><b>Sports</b></li>
+                <li class="enter"><b>Entertainment</b></li>
+                <li class="shop"><b>Shopping</b></li>
+            </ul>
+        </div>
+        <div class="body">
+            <div class="contents">contents</div>
+            <div class="side">
+                <div class="main">
+                    <div class="login">
+                        <div class="box"><b>Login Box</b></div>
+                        <div class="input">
+                            <div class="id">
+                                <input type="text" placeholder="Input your ID" id="textid">
+                            </div>
+                            <div class="pw">
+                                <input type="password" placeholder="Input your Password" id="textpw">
+                            </div>
+                        </div>
+                        <div class="button">
+                            <input type="button" value="Login" id="loginbutton">
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="banner">banner</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="left">left</div>
+            <div class="right">right</div>
+        </div>
+    </div>
+</body>
+</html>
