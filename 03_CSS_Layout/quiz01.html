@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <style>
         *{box-sizing: border-box; text-align: center;}
         div{border: 1px solid black;}
        
-        .container{width: 800px;}
+        .container{width: 1000px; margin: auto;}
         .container>.header{height: 100px;}
         .container>.header>div{float: left;}
-        .header img{width: 100%; height: 100%;}
+        .header>.logo img{width: 60%; height: 100%;}
+        .header>.title img{width: 50%; height: 100%;}
         .header>.logo{
             width: 30%;
             height: 100%;
@@ -23,18 +25,14 @@
             height: 100%;
             margin: 0px;
         }
-        .container>.navi{
-            height: 40px;
-        }
-        .navi{
-            height: 100%;
-            
-        }
+        .navi{height: 40px;}
+        
         .navi>ul{
             overflow: hidden;
             margin: 0px;
             padding: 0px;
             background-color: orange;
+            height: 100%;
         }
 
         .navi>ul>li{
@@ -43,6 +41,7 @@
             width: 25%;
             line-height: 40px;
             color: white;
+            height: 100%;
         }
 
         .navi>ul>li:hover{
@@ -50,88 +49,217 @@
             cursor: pointer;
         }
 
-        .container>.body{height: 300px;}
-        .container>.body>div{float: left; }
-        .body>.contents{
-            width: 60%;
+        .body{height:800px;}
+        .body>div{float:left;}
+        .body>.contents{width:70%;height:100%;}
+
+        .photo{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        .line{   
+            width: 100%;
+            height: 50%;
+        }
+        .line>*{
+            float: left;
+            width: 50%;
             height: 100%;
         }
-        .body>.side{
-            width: 40%;
-            height: 100%;
+
+        .body img{width: 100%; height: 100%;}
+        .line>.photo{
+            padding: 5px;
         }
+        .line>.photo>.img{
+            height: 90%;
+            padding: 2px;
+            border-radius: 5px;
+        }
+        .line>.photo>.desc{
+            height: 10%;
+            line-height: 38px;
+            font-style: italic;
+        }
+
+        .body>.side{width:30%;height:100%;}
         
-        .body>.side>.login{
-            height: 30%;
+        .body>.side>.login{height:15%;}
+        .body>.side>.login>.login-title{height:25%;text-align:center;}
+        .body>.side>.login>.login-contents{height:75%;}
+        .body>.side>.login>.login-contents>div{float:left;height:100%;}
+        .body>.side>.login>.login-contents>.input-text{width:70%;}
+        .body>.side>.login>.login-contents>.input-text>input{width:100%;height:50%;}
+
+        .body>.side>.login>.login-contents>.input-btn{width:30%;text-align: center;}
+        .body>.side>.login>.login-contents>.input-btn>input[type=button]{
+            height:45px;
+            width:45px;
+            margin-top:20px;
         }
 
         .body>.side>.banner{
-            height: 70%;
+            height: 85%;
         }
-
-        .body>.side>.login>.id{
-            float: left;
-        }
-
-        .body>.side>.login>.box{
-            line-height: 45px;
-        }
-
-        .body>.side>.login>*{
-            height: 50%;
+        .banner>.mailbox{
+            width: 100%;
+            height: 5%;
+            font-size: 20px;
+            font-style: italic;
            
         }
-       
-        .body>.side>.login>.id>*{
-            height: 50%;
-            line-height: 16px;
+        .banner>.mails{
+            width: 100%;
+            height: 95%;
+            overflow: auto;
         }
-        .body>.side>.login>.button{
-            height: 50%;
-            line-height: 38px;
+        .banner>.mails>table{
+            width: 100%;
         }
-        #button{
+        .banner>.mails>table td{
             height: 30px;
-            width: 65px;
         }
 
-        .container>.footer{height: 100px;}
-        .container>.footer>div{float: left;width: 50%;height: 100%;}
+        .container>.footer{
+            height: 100px;
+            width: 100%;
+            font-size: 20px;
+            line-height: 100px;
+            font-style: italic;
+        }
         
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo"><img src="logo4.jpg"></div>
+            <div class="logo"><img src="logo1.jpg"></div>
                 
-            <div class="title"><img src="logo.jpg"></div>
+            <div class="title"><img src="images.png"></div>
         </div>
         <div class="navi">
             <ul>
-                <li class="news"><b>News</b></li>
-                <li class="sports"><b>Sports</b></li>
-                <li class="enter"><b>Entertainment</b></li>
-                <li class="shop"><b>Shopping</b></li>
+                <li class="news"><b>Men</b></li>
+                <li class="sports"><b>Women</b></li>
+                <li class="enter"><b>Accessory</b></li>
+                <li class="shop"><b>Service Center</b></li>
             </ul>
         </div>
         <div class="body">
-            <div class="contents">contents</div>
+            <div class="contents">
+                <div class="photo">
+                    <div class="line">
+                        <div class="photo">
+                            <div class="img"><a href="https://tbhshop.co.kr/goods/goods_view.php?goodsNo=1000089093&utm_source=googleSsa&utm_medium=cpc&utm_campaign=tbh&utm_content=211025&nbsrc=adwords_g&nbkw=&gclid=CjwKCAjwzt6LBhBeEiwAbPGOgW3tAMLq5wa4-OGEnC8unfx1ZCucY-zDSJs2tm0fWz83VrrWUuXWfhoCLewQAvD_BwE"><img src="이미지1.jpg"></a></div>
+                            <div class="desc"><b>캐시미어스탠다드싱글코트</b></div>
+                        </div>
+                        <div class="photo">
+                            <div class="img"><a href="https://www.tbhshop.co.kr/goods/goods_view.php?goodsNo=1000092457&_NB_RECO=1_11"><img src="이미지2.jpg"></a></div>
+                            <div class="desc"><b>가디건</b></div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="photo">
+                            <div class="img"><a href="https://www.tbhshop.co.kr/goods/goods_view.php?goodsNo=1000089103&_NB_RECO=1_13"><img src="이미지3.jpg" alt=""></a></div>
+                            <div class="desc"><b>NP다운맥코트</b></div>
+                        </div>
+                        <div class="photo">
+                            <div class="img"><a href="https://www.tbhshop.co.kr/goods/goods_view.php?goodsNo=1000093679&_NB_RECO=1_6"><img src="이미지4.jpg" ></a></div>
+                            <div class="desc"><b>김고은 핸드메이드 싱글숏코트</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="side">
                 <div class="login">
-                    <div class="box"><b>Login Box</b></div>
-                    <div class="id">
-                        <div><input type="text" placeholder="Input yout ID"></div>
-                        <div><input type="password" placeholder="Input yout Password"></div>
+                    <div class="login-title">
+                        <b>Login Box</b>
                     </div>
-                    <div class="button"><input type="button" value="Login" id="button"></div>
+                    <div class="login-contents">
+                        <div class="input-text">
+                            <input type=text placeholder="Input your ID">
+                            <input type=password placeholder="Input your password">
+                        </div>
+                        <div class="input-btn">
+                            <input type=button value="login">
+                        </div>
+                    </div>
                 </div>
-                <div class="banner">banner</div>
+                <div class="banner">
+                    <div class="mailbox">
+                        MailBox <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="mails">
+                        <table border="1"> 
+                            <tr>
+                                <td>1번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>2번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>3번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>4번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>5번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>6번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>7번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>8번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>9번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>10번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>11번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>12번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>13번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>14번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>15번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>16번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>17번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>18번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>19번째 메일입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>20번째 메일입니다.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
             </div>
         </div>
         <div class="footer">
-            <div>left</div>
-            <div>right</div>
+            Copyright by DHK since 2021.10.27
         </div>
     </div>
 </body>

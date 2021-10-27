@@ -6,175 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{box-sizing: border-box; text-align: center;}
-        div{border: 1px solid black;}
-        .container{width: 800px;}
-
-        .container>.header{
-            height: 100px;
-        }
-        .container>.header>div{
-            float: left;
-        }
-        .container>.header>.logo{
-            height: 100%;
-            width: 30%;
-        }
-
-        .container>.header>.title{
-            height: 100%;
-            width: 70%;
-        }
-
-        .container>.navi{
-            height: 60px;
-        }
-        .container>.navi>ul{
-            height: 100%;
-            margin: 0px;
-            padding: 0px;
-            background-color: coral;
-        }
-        .container>.navi>ul>li{
-            float: left;
-            list-style-type: none;
-            width: 25%;
-            height: 100%;
-            line-height: 60px;
-            color: white;
-        }
-        .navi>ul>li:hover{
-            background-color:cadetblue;
-            cursor: pointer;
-        }
-
-        .container>.body{
-            height: 500px;
-        }
-
-        .container>.body>div{
-            float: left;
+        *{box-sizing: border-box;}
+        div{border: 1px solid black; margin: auto;}
+        .container{
+            width: 800px;
+            height: 800px;
            
         }
-
-        .container>.body>.contents{
-            height: 100%;
-            width: 70%;
-        }
-        .container>.body>.side{
-            height: 100%;
-            width: 30%;
-        }
-        .container>.body>.side>.main{
+       
+        .cloth{
             height: 30%;
+            text-align: center;
+        }
+        .cloth>*{
+            float: left;
+            height: 100%;
+            width: 25%;
+        }
+
+        .cloth>.line>.photo{
+            height: 90%;
+        }
+        .cloth>.line>.desc{
+            height: 10%;
         }
         
-        .main>.login{
+        .navi{
+            height: 5%;
+            text-align: center;
+            background-color: black;
+        }
+
+        .navi>div{
+            float: left;
             height: 100%;
-        }
-
-        .main>.login>.box{
-            height: 50%;
-            line-height: 75px;
-        }
-
-        .main>.login>.input, .main>.login>.button{
-            float: left;  
-        }
-
-        .main>.login>.input{
-            height: 50%;
-            width: 50%;
-        }
-        .login>.input>*{
-            height: 50%;
-            width: 100%;
-            line-height: 30px;
-        }
-        .login>.button{
-            height: 50%;
-            width: 50%;
-            line-height: 70px;
-        }
-        #textid, #textpw{
-            width: 100px;
+            width: 20%;
+            line-height: 37px;
+            color: white;
             
         }
 
-        #loginbutton{
-            width: 60px;
-            height: 30px;
+        .body{
+            height: 15%;
         }
-        
+        .body>.login{
+            float: left;
+            width: 40%;
+            height: 100%;
+            
+        }
+        .login>.loginbox{
+            height: 25%;
+            text-align: center;
+            line-height: 34px;
+        }
+        .login>.loginsystem{
+            height: 55%;
+        }
+        .login>.remember{
+            height: 20%;
+            text-align: center;
+        }
 
-        .container>.body>.side>.banner{
-            height: 70%;
+        .box{
+            height: 100%;
+            
         }
-        .banner{
-            height: 70%;
-        }
-
-        .container>.footer{
-            height: 100px;
-        }
-
-        .container>.footer>div{
+        .box>div{
             float: left;
         }
-        .container>.footer>.left{
+        .box>.input{
+            width: 60%;
             height: 100%;
-            width: 50%;
         }
-        .container>.footer>.right{
+        .box>.input>*{
+            height: 50%;
+            line-height: 25px;
+            text-align: center;
+        }
+      
+        .box>.button{
+            width: 40%;
             height: 100%;
-            width: 50%;
+            text-align: center;
+            line-height: 57px;
         }
 
+        #button{width: 60px; height: 40px;}
+
+        .body>.contents{
+            float: left;
+            width: 60%;
+            height: 100%;
+        }
+        
+        .footer{
+            height: 10%;
+        }
+        .footer>*{
+            float: left;
+            height: 100%;
+            text-align: center;
+            line-height: 80px;
+        }
+        .footer>.logo{
+            width: 30%;
+        }
+        .footer>.title{
+            width: 70%;
+        }
 
     </style>
     
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">logo</div>
-            <div class="title">title</div>
-        </div>
-        <div class="navi"> 
-            <ul>
-                <li class="news"><b>News</b></li>
-                <li class="sports"><b>Sports</b></li>
-                <li class="enter"><b>Entertainment</b></li>
-                <li class="shop"><b>Shopping</b></li>
-            </ul>
-        </div>
-        <div class="body">
-            <div class="contents">contents</div>
-            <div class="side">
-                <div class="main">
-                    <div class="login">
-                        <div class="box"><b>Login Box</b></div>
-                        <div class="input">
-                            <div class="id">
-                                <input type="text" placeholder="Input your ID" id="textid">
-                            </div>
-                            <div class="pw">
-                                <input type="password" placeholder="Input your Password" id="textpw">
-                            </div>
-                        </div>
-                        <div class="button">
-                            <input type="button" value="Login" id="loginbutton">
-                        </div>
-                    
-                    </div>
-                </div>
-                <div class="banner">banner</div>
+   <div class="container">
+       
+       <div class="cloth">
+           <div class="line">
+               <div class="photo">photo</div>
+               <div class="desc">desc</div>
+           </div>
+           <div class="line">
+                <div class="photo">photo</div>
+                <div class="desc">desc</div>
             </div>
-        </div>
-        <div class="footer">
-            <div class="left">left</div>
-            <div class="right">right</div>
-        </div>
+            <div class="line">
+                <div class="photo">photo</div>
+                <div class="desc">desc</div>
+            </div>
+            <div class="line">
+                <div class="photo">photo</div>
+                <div class="desc">desc</div>
+            </div>
+       </div>
+       <div class="navi">
+           <div class="men"><b>Men</b></div>
+           <div class="women"><b>Women</b></div>
+           <div class="shoes"><b>shoes</b></div>
+           <div class="accessory"><b>Accessory</b></div>
+           <div class="service"><b>Service</b></div>
+       </div>
+       <div class="body">
+           <div class="login">
+                <div class="loginbox">회원로그인</div>
+                <div class="loginsystem">
+                    <div class="box">
+                        <div class="input">
+                            <div class="id"><input type="text" placeholder="아이디"></div>
+                            <div class="pw"><input type="password" placeholder="비밀번호"></div>
+                        </div>
+                        <div class="button"><input type="button" value="로그인" id="button"></div>
+                    </div>  
+                </div>
+                <div class="remember"><input type="checkbox">아이디 기억</div>
+           </div>
+           <div class="contents">
+               contents
+           </div>
+       </div>
+       <div class="footer">
+        <div class="logo">logo</div>
+        <div class="title">title</div>
     </div>
+   </div>
 </body>
 </html>
