@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+       
+        body{
+            margin: 0px;
+        }
+
+        .container{
+            border: 1px solid #00000030;
+            width: 150px;
+            height: 400px;
+            position: relative;
+            top: 200px;
+            right: 125px;
+            background-color: #80808020;
+            color: white;
+            transition-duration: 1s;
+        }
+        .container:hover{
+            border: 1px solid black;
+            transform: translate(125px);
+            background-color: #80808070;
+        }
+        .container>div{
+            float: left;
+        }
+        .container>.menu{
+            height: 100%;
+            width: 80%;
+        }
+        .menu>div:hover{
+            background-color: rgba(128, 128, 128, 0.426);
+            cursor: pointer;
+        }
+
+        .container>.menu>div{
+            height: 15%;
+            line-height: 60px;
+            padding-left: 5px;
+        }
+        .container>.bar{
+            text-align: right;
+            line-height: 400px;
+            height: 100%;
+            width: 20%;
+            color: #000000;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="home">Home</div>
+            <div class="aboutme">AboutMe</div>
+            <div class="portfolio">Portfolio</div>
+            <div class="contact">Contact</div>    
+        </div>
+        <div class="bar">
+            ▷
+        </div>
+    </div>
+</body>
+</html>

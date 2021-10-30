@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{border: 1px solid black;}
+
+        .box{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            transition-duration: 2s;
+        }
+        #box1{
+            background-color: brown;
+            position: absolute;
+            top: 500px;
+        }
+
+        #box1:hover{
+            transform: translate(100px);
+            background-color: cadetblue;
+            width: 200px;
+        }
+        #box2:hover{
+            transform: rotate(54000deg);
+        }
+        #box3:hover{
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+</body>
+</html>
