@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Patrick+Hand&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@500&display=swap" rel="stylesheet">
+    <style>
+       
+        div{padding: 0px; margin: 0px;}
+        .container{position: relative;}
+        .header{height: 80px; background-color: seagreen;line-height: 80px; text-align: center;font-weight: bold;color: white;}
+        .header-search:hover{cursor: pointer;}
+        .main-navbar{background-color: #2e8b5720;}
+        .body-image{text-align: center; font-weight: bold; font-family: 'Nanum Pen Script', cursive; font-size: 30px; margin-top: 5px; margin-bottom: 5px;}
+        .body-image img{height: 100%; width: 100%; }
+        .navbar{font-family: 'Nanum Pen Script', cursive; font-size: 25px;}
+       
+        .card-body{background-color: #80808040;}
+        .nav-item:hover{background-color: #00800020;}
+        .menu>div:hover{cursor: pointer;}
+        .menu{text-align: center; line-height: 60px; font-weight: bold; font-size: 18px;}
+        .menu>div{border-radius: 30%; border: 0.5px solid #fa807270;}
+       
+       .reserve img{height: 100%; width: 100%; border-radius: 10%; }
+        .btn-outline-success{font-size: 12px;}
+        .dropbtn {
+           color: black;
+          background-color: white;
+          font-weight: bold;
+          border: none;}
+
+          .dropdown {
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 22px;
+            position: relative;
+            display: inline-block;
+            background-color: white;
+          }
+
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            left: -100px;
+            background-color:white;
+            min-width: 300px;
+            z-index: 1;
+            text-align: left;
+            padding-left: 8px;
+          }
+         
+
+          .dropdown-content a {
+            color: black;
+          
+            text-decoration: none;
+            display: block;
+          }
+
+          .dropdown-content a:hover {background-color: #2e8b5770;}
+          .dropdown:hover .dropdown-content {display: block;}
+          #content1, #content3{left: 20px;}
+          #infor{height: 100%; font-weight: bold; background-color: #80808030;border-radius: 5%; padding-top: 5px;}
+          #possible-reserve{text-align: right; }
+          .btn-sm{background-color: #ff7f5080; border: none;color: black;font-weight: bold;}
+          .btn-sm:hover{background-color: #ff7f50;}
+          .photo{border: 0.5px solid gray;}
+          .photo img{cursor: pointer;}
+          .footer{font-size: 12px; text-align: center;}
+          .footer-logo{text-align: right;}
+          .footer-logo:hover{cursor: pointer;}
+          .last{margin-top: 10px;}
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row header">
+            <div class="col-10" style="font-size: 20px; font-style: oblique;"><i class="fas fa-campground" ></i> Camping Lover</div>
+            <div class="col-2 header-search"><i class="fas fa-search" style="font-size: 25px;"></i></div>
+        </div>
+        <div class="row navbar">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                    <div class="container-fluid main-navbar">
+                      <a class="navbar-brand" href="#">카테고리</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">캠핑러버 홈</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">캠핑장 검색</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">예약확인 / 취소</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">고객센터</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+        <div class="row body-image">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card" >
+                        <img src="메인이미지-카라반.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">캠핑 매니아들을 위한 대한민국 대표 <br>캠핑 예약 플랫폼 캠핑러버!!</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <img src="메인이미지5.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">계곡, 야외 수영장, 스파 시설을 갖춘 <br>카라반 캠핑장부터</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <img src="메인이미지2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">애완동물을 데리고 올 수 없어 고민한 사람들에겐 <br>애완동물 동반 캠핑장!</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card" >
+                        <img src="메인이미지4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">차 하나만 있으면 어디든지 가능 갬성 캠핑인들을 위한 <br>차박 캠핑장까지!</p>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="row menu">
+            <div class="col-6 col-md-3">
+              <div class="dropdown">
+              <button class="dropbtn"><img src="캠핑.png" alt=""> 캠핑</button>
+                <div class="dropdown-content" id="content1">
+                  <a href="#">제천캠핑랜드 캠핑 & 글램핑</a>
+                  <a href="#">더시크릿가든 캠프지라운드</a>
+                  <a href="#">경주 텐타우스 갬핑글램핑</a>
+                  <a href="#">해여림빌리지</a>
+                  <a href="#">제천 달숲캠핑장 글램핑</a>
+                  <a href="#">거창 휴일엔펜션 & 캠핑</a>
+                  <a href="#">산청 지리산 자양보 오토캠핑장</a>
+                </div>
+              </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="dropdown">
+                <button class="dropbtn"><img src="카라반.png" alt=""> 카라반</button>
+                  <div class="dropdown-content" id="content2">
+                    <a href="#">포천 산중호걸 글램핑카라반</a>
+                    <a href="#">럭셔리글램핑 바누</a>
+                    <a href="#">호수카라반캠핑장</a>
+                    <a href="#">서울북한산글램핑장</a>
+                    <a href="#">더시크릿가든 캠프지라운드</a>
+                    <a href="#">제주 플래티늄카라반</a>
+                    <a href="#">경주 텐타우스 캠핑글램핑</a>
+                  </div>
+                </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="dropdown">
+                  <button class="dropbtn"><img src="글램핑.png" alt=""> 글램핑</button>
+                    <div class="dropdown-content" id="content3">
+                      <a href="#">진주 캠핑소사이어티 럭셔리글램핑 & 피크닉</a>
+                      <a href="#">아로니움글램핑</a>
+                      <a href="#">포천 달빛글램핑</a>
+                      <a href="#">럭셔리글램핑 바누</a>
+                      <a href="#">봉식이놀이터</a>
+                      <a href="#">더파크12글램핑펜션</a>
+                      <a href="#">제천캠핑랜드 캠핑 & 글램핑</a>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="dropdown">
+                    <button class="dropbtn"><img src="펜션.png" alt=""> 펜션</button>
+                      <div class="dropdown-content" id="content4">
+                        <a href="#">더파크12글램핑펜션</a>
+                        <a href="#">럭셔리 글램핑 W 풀빌라</a>
+                        <a href="#">파주 초리풍경 펜션</a>
+                        <a href="#">해여림빌리지</a>
+                        <a href="#">파주 초리꽃펜션</a>
+                        <a href="#">양평 썬포레 펜션</a>
+                        <a href="#">제천 달숲캠핑장 글램핑</a>
+                      </div>
+                    </div>
+                    </div>
+            
+        </div>
+        <div class="row reserve">
+            <div class="col-12 reserve-title" style="font-weight: bold; background-color: #00800050;font-family: 'Nanum Pen Script', cursive; text-align: center;font-size: 28px; ">
+                예약완료 직전 핫플레이스 캠핑장!!
+            </div>
+            
+            <div class="col-12 col-md-9" style="font-weight: bold; background-color: #00800050; font-family: 'Nanum Pen Script', cursive; text-align: center;font-size: 25px;">장소</div>
+            <div class="col-md-2 d-none d-md-block" style="font-weight: bold; background-color: #00800050; font-family: 'Nanum Pen Script', cursive; font-size: 25px;">가격</div>
+            <div class="col-md-1 d-none d-md-block" style="font-weight: bold; background-color: #00800050; font-family: 'Nanum Pen Script', cursive; text-align: right; font-size: 25px;">예약</div>
+            <div class="col-12 col-md-3 photo">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="핫플1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="1-1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="1-2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="1-3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="row" id="infor">
+                <div class="col-12 col-md-8 order-1">서울 북한산 글램핑장<span class="badge bg-success">예약가능</span></div>
+                <div class="col-6 col-md-2 order-3 order-md-2" >89,000원</div>
+                <div class="col-6 col-md-2 order-3 order-md-2" id="possible-reserve">
+                  <button type="button" class="btn btn-primary btn-sm">예약</button>
+                </div>
+                <div class="col-12 order-2 order-md-3" style="border-top: 0.5px dotted black;">서울에서 유일한 카라반 캠핑장<br>은평뉴타운 인근 북한산에 위치한 서울 유일 최고급 글램핑장! 지하철 연신내역 10분거리!</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 photo">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="핫플2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="2-1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="2-2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="2-3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="row" id="infor">
+                <div class="col-12 col-md-8 order-1">더시크릿가든 캠프지라운드<span class="badge bg-success">예약가능</span></div>
+                <div class="col-6 col-md-2 order-3 order-md-2">80,000원</div>
+                <div class="col-6 col-md-2 order-3 order-md-2" id="possible-reserve">
+                  <button type="button" class="btn btn-primary btn-sm">예약</button>
+                </div>
+                <div class="col-12 order-2 order-md-3" style="border-top: 0.5px dotted black;">춘천 감성캠핑의 성지<br>천연 잔디가 이쁜 글램핑 & 더카라반호텔을 운영하고 있는 아웃팅 스타일의 캠핑장</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 photo">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="핫플3.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="3-1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="3-2.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="3-3.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="row" id="infor">
+                <div class="col-12 col-md-8 order-1">부산 초원숲속글램핑<span class="badge bg-danger">예약완료</span></div>
+                <div class="col-6 col-md-2 order-3 order-md-2">200,000원</div>
+                <div class="col-6 col-md-2 order-3 order-md-2" id="possible-reserve">
+                  예약불가
+                </div>
+                <div class="col-12 order-2 order-md-3" style="border-top: 0.5px dotted black;">부산 풀패키지 캠핑장<br>기장 글램핑 하기 좋은 숲속캠핑장 캠핑, 글램핑, 카페, 가든을 같이 운영하는 캠핑장</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 photo">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="핫플4.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="4-1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="4-2.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="4-3.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="row" id="infor">
+                <div class="col-12 col-md-8 order-1">제주 플래티늄카라반<span class="badge bg-success">예약가능</span></div>
+                <div class="col-6 col-md-2 order-3 order-md-2">109,000원</div>
+                <div class="col-6 col-md-2 order-3 order-md-2" id="possible-reserve">
+                  <button type="button" class="btn btn-primary btn-sm">예약</button>
+                </div>
+                <div class="col-12 order-2 order-md-3" style="border-top: 0.5px dotted black;">제주바다 앞 카라반<br>독일 정통카라반하비(HOBBY)의 품격과 아름다운 제주에서 꿈같은 카라반 체험여행</div>
+              </div>
+            </div>
+        </div>
+        <div class="row last">
+          <div class="col-2 col-md-1 footer">회사소개</div>
+          <div class="col-2 col-md-1 footer">이용약관</div>
+          <div class="col-4 col-md-2 footer">개인정보처리방침</div>
+          <div class="col-4 col-md-2 footer">사업자정보확인</div>
+          <div class="col-12 col-md-6 footer-logo">
+            <img src="유투브로고.png" alt="">
+            <img src="트위터아이콘.png" alt="">
+            <img src="페이스북아이콘.png" alt="">
+            <img src="인스타그램아이콘.jpg" alt="">
+          </div>
+        </div>
+    </div>
+</body>
+</html>
