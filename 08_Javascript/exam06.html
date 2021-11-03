@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function
+        function plus(num1, num2){ // num1, num2는 매개변수
+                                   // 메소드의 리턴값 자리에는 변수형이 따로 없기 때문에 그냥 function을 입력한다.
+            let result = num1 + num2;
+            return result; // return 값이 let일지라도 function을 사용하면 알아서 다 해결해준다..
+        }
+        function hello(){
+            console.log("Hello");
+        }
+        let result = plus(10, 20);
+        console.log(result); // 30이 출력
+        hello();
+
+        // function을 만들때 사용하는 함수의 이름(plus, hello)이 소스코드의 주소값이 된다.
+        // java에서는 함수의 주소를 사용할 수 없지만 java script에서는 자유롭게 사용할 수 있게 해준다.
+
+        plus() // plus는 함수의 이름인 동시에 num1+num2가 저장되어 있는 주소이다. (이게 java와의 차이점)
+               // plus()는 plus의 주소를 찾아가서 그 코드를 실행하라는 명령이다. ()의 차이를 기억하자!
+
+        let func = plus; // plus는 함수의 이름이면서 동시에 주소이기 때문에 내가 원하는 변수안에 저장이 가능하다....
+                         // 이 상태는 func와 plus가 같은 주소를 가리키고 있으며, 그 주소에는 num1+num2이 있다.
+        func()           // plus를 func에 담았기 때문에 func()는 plus()와 같은 의미를 갖게 된다.
+
+        let result = func(5,10);
+        console.log(result); // 15가 출력
+
+        function plus(num1, num2){
+            return num1 + num2;
+        }
+
+        let plus = function(num1,num2){
+            return num1 + num2;
+        }
+
+        // function(num1, num2){ // 익명 함수 --> 함수가 있긴 하지만 아래에서 사용하기 힘들기 때문에 이 함수를 변수에 저장
+        //     return num1 + num2; // 익명함수는 일회용으로 사용하거나 변수에 담아서 사용
+        // }
+
+        (function(num1,num2){
+            return num1 + num2;
+        })(10,5);               // IIFE(Immediately Invoke Function Expression) 일회용 함수
+    </script>
+</body>
+</html>
