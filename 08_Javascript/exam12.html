@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){ // 렌더링이 끝났을 때 실행(/html까지 코드를 읽은 뒤 실행)
+            document.getElementById("event").onclick = function(){  
+                open("http://www.naver.com","pop","width=400px,height=300px");
+                //팝업창의 주소 기입, 팝업창을 구분짓는 고유한 값, 팝업창에 대한 설정값 부여
+            }   
+        }
+        
+        window.onunload = function(){
+
+        } 
+    </script>
+</head>
+<body>
+    <button id="event">Event!</button>
+   
+</body>
+</html>

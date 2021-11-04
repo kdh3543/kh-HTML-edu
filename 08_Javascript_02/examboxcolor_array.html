@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        div{border: 1px solid black; margin: auto;text-align: center;}
+        .container{height: 200px;width: 200px;}
+        .box{height: 80%;width: 100%;line-height: 160px;}
+        .btns{height: 20%;width: 100%;line-height: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box" id="box">
+    I'm Box!
+    </div>
+    <div class="btns">
+        <button id="red" color="pink">red</button>
+        <button id="blue" color="dodgerblue">blue</button>
+        <button id="green" color="forestgreen">green</button>
+    </div>
+    </div>  
+
+    <script>
+        let btnArr = document.getElementsByTagName("button");
+        console.log(btnArr);
+
+        for(let i = 0; i < btnArr.length;i++){
+            btnArr[i].onclick = function(){
+                document.getElementById("box").setAttribute("style","background-color:"+btnArr[i].getAttribute("color"));
+            }
+        }
+
+        // let red = document.getElementById("red");
+        // let blue = document.getElementById("blue");
+        // let green = document.getElementById("green");
+        // let box = document.getElementById("box");
+        
+        // red.onclick = function(){
+        //     box.setAttribute("style","background-color: red;");
+        // }
+        // blue.onclick = function(){
+        //     box.setAttribute("style","background-color: blue;");
+        // }
+        // green.onclick = function(){
+        //     box.setAttribute("style","background-color: green;");
+        // }
+
+    </script>
+
+</body>
+</html>

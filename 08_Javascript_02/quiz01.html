@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset >
+        <legend>
+            Fruits
+        </legend>
+        <div id="title">
+            Tomato, Banana
+        </div>
+    </fieldset>
+    <br>
+    <input type="text" placeholder="앞에 추가할 값" id="text1">
+    <button id="frontAdd">앞쪽에 추가</button>
+    <button id="frontDel">앞에서 삭제</button>
+    <br>
+    
+    <input type="text" placeholder="뒤에 추가할 값" id="text2">
+    <button id="lastAdd">뒷쪽에 추가</button>
+    <button id="lastDel">뒤에서 삭제</button>
+
+    <script>
+        
+        let text1 = document.getElementById("text1");
+        let text2 = document.getElementById("text2");
+        let frontAdd = document.getElementById("frontAdd");
+        let frontDel = document.getElementById("frontDel");
+        let lastAdd = document.getElementById("lastAdd");
+        let lastDel = document.getElementById("lastDel");
+        let title = document.getElementById("title");
+        
+        
+        let arr = ["Tomato","Banana"];
+        console.log(arr);
+        frontAdd.onclick = function(){     
+                arr.unshift(text1.value);
+                title.innerHTML = arr;
+                text1.value = "";
+                text1.focus();
+        }
+        frontDel.onclick = function(){     
+                arr.shift();
+                title.innerHTML = arr;
+        }
+        lastAdd.onclick = function(){     
+                arr.push(text2.value);
+                title.innerHTML = arr;
+                text2.value = "";
+                text2.focus();
+        }
+        lastDel.onclick = function(){     
+                arr.pop();
+                title.innerHTML = arr;
+        }
+        
+    </script>
+</body>
+</html>
