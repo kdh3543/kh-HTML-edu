@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function Student(id,name,score){
+            this.id = id;
+            this.name = name;
+            this.score = score;
+        }
+        let students = [];
+        students[0] = new Student(1001,"Tom",{kor:80,eng:90});
+        students[1] = new Student(1002,"Jane",{kor:100,eng:70});
+        students[2] = new Student(1003,"Mike",{kor:50,eng:100});
+        console.log(students[0]);
+        console.log(students[0].score);
+
+        for(let i =0;i<students.length;i++){
+            console.log(students[i].name+" : "+
+            (students[i].score.kor+students[i].score.eng)+" : "+
+            (students[i].score.kor+students[i].score.eng)/2);
+        }
+    </script>
+
+</body>
+</html>

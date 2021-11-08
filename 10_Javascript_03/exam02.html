@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    let person = {
+        name:"Jack",
+        contact:"01012341234",
+        hello:function(){
+            console.log("Hello Everyone. I'm" + this.name);
+        },
+        hobby:["Java","Book","Guitar"],
+        score:{
+            kor:100,
+            eng:90,
+            math:80
+        },
+        favoriteFruits:function(){
+            return ["Apple","Orange","Mango"];
+        },
+        abilities:function(){
+            return{
+                java:function(){return 100;},
+                css:function(){return 90;},
+                js:function(){return 80;},
+            };
+        },
+        helloTo:function(friend){
+            console.log("Hello "+friend.name)
+        },
+
+        Dron:function(){
+            this.brand = "Samsung";
+            this.price = "20000";
+        }
+    };
+
+    console.log(person.name);
+    console.log(person.contact);
+    person.hello();
+    console.log(person.hobby[0]);
+    //Jack의 영어점수
+    console.log(person.score.eng);
+    // Jack이 가장 좋아하는 과일 중 3번째 과일
+    console.log(person.favoriteFruits()[2]);
+    //Jack의 css 점수 출력
+    console.log(person.abilities().css());
+  
+    person.helloTo({name:"Tom"});
+
+    let friend = new Object();
+    friend.name = "Tom";
+    person.helloTo(friend);
+
+    function Friend(name){
+        this.name = name;
+    }
+    person.helloTo(new Friend("Tom"));
+
+    let dron = new person.Dron();
+    console.log(dron.brand);
+    console.log(dron.price);
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // let obj1 = {
+        //     num:123,
+        //     str:"hello",
+        //     1:"One"
+        // };
+
+        // obj1[1]
+        // console.log(obj1.num);
+
+        // let obj2 = new Object();
+        // obj2.num = 234;
+        // obj2.str = "world";
+        // obj2[1] = "One";
+
+        function plus(num1, num2){
+            this.a = num1;
+            let b = num2;
+        }
+        let obj3 = new plus(10,20);
+        console.log(obj3.a);
+        console.log(obj3.b);
+
+        console.log(obj3["a"]);
+
+        function Test(){
+            this.num = 123;
+            this.str = "JavaScript";
+            this[1] = "One";
+        }
+        let obj3 = new Test();
+        console.log(obj3["nun"]);
+        console.log(obj3.str);
+        console.log(obj3[1]);
+        
+    </script>
+</body>
+</html>

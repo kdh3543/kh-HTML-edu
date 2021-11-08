@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>목록</legend>
+        <div id="content"></div>
+    </fieldset>
+    <input type="text" placeholder="추가할 단어를 입력하세요" id="addtext">
+    <button id="add">추가하기</button>
+    <br>
+    <input type="text" placeholder="삭제할 단어를 입력하세요" id="deltext">
+    <button id="del">삭제하기</button>
+
+    <script>
+        let div = document.getElementById("content");
+        let add = document.getElementById("add");
+        let del = document.getElementById("del");
+        let addtext = document.getElementById("addtext");
+        let deltext = document.getElementById("deltext");
+        let arr = [];
+
+        add.onclick = function(){
+            arr.push(addtext.value);
+            div.innerHTML = arr;
+            addtext.value = "";
+            addtext.focus();
+        }
+        del.onclick = function(){
+            let delindex = arr.indexOf(deltext.value);
+            if(delindex == -1){
+                alert("해당 항목은 존재하지 않습니다.");
+            }else{
+                arr.splice(delindex,1);
+                div.innerHTML = arr;
+                deltext.value = "";
+                deltext.focus();
+            }
+        }
+    </script>
+</body>
+</html>
