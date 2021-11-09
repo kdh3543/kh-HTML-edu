@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "안녕하세요 저는 Jane입니다. 급한 일은 010-1234-4321 로 연락주세요.";
+        let regex = /010-[0-9]{4}-[0-9]{4}/;
+
+        let result = regex.test(str);
+
+        if(result == true){
+            console.log("핸드폰 번호가 존재합니다.");
+        }else{
+            console.log("핸드폰 번호가 존재하지 않습니다.")
+        }
+
+    </script>
+</body>
+</html>

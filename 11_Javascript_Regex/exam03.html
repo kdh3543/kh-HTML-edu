@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = `여보세요! 저는 Jane 입니다. 급한 일은 010-1112-3334 or 010-1234-4321 로 연락주세요.`;
+
+        let regexPhone = /(010-?\d{4}-?\d{4}) or (010-?\d{4}-?\d{4})/g;
+        let result = regexPhone.exec(str);
+        console.log(RegExp.); // 입력된 전체 문장
+        console.log(result[0]);
+        console.log(RegExp.$);
+        console.log(result[1]);
+        console.log(RegExp.$1);
+        console.log(result[2]);
+        console.log(RegExp.$2);
+    </script>
+</body>
+</html>

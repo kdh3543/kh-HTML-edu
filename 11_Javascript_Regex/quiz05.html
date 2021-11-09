@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{margin:auto;text-align: center;}
+        img{width:100%;height:100%;}
+        #td-img{width:200px;height:250px;line-height:0}
+    </style>
+</head>
+<body>
+    <script>
+        let str = `
+        <div class="sect-movie-chart">
+            <h4 class="hidden">
+                무비차트 - 예매율순
+            </h4>
+            <ol>
+            
+                <li>
+                    <div class="box-image" >
+                        <strong class="rank">No.1</strong>  
+                        <a href="/movies/detail-view/?midx=85011">
+                            <span class="thumb-image">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85011/85011_320.jpg" alt="이터널스 포스터" onerror="errorImage(this)"/>
+                                <span class="ico-grade grade-12">12세 이상</span>
+                            </span>
+                            <strong class="no1">1위</strong>
+                        </a>
+                        <span class="screentype">
+                            
+                                <a class="imax" href="#" title="IMAX 상세정보 바로가기" data-regioncode="07">IMAX</a>
+                            
+                                <a class="forDX" href="#" title="4DX 상세정보 바로가기" data-regioncode="4D14">4DX</a>
+                            
+                        </span>
+                    </div>
+                    
+                    <div class="box-contents">
+                        <a href="/movies/detail-view/?midx=85011">
+                            <strong class="title">이터널스</strong>
+                        </a>
+
+                        <div class="score">
+                            <strong class="percent">예매율<span>50.5%</span></strong>
+                            <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위1~ 3위)-->
+                            <div class="egg-gage small">
+                                            <span class="egg good"></span>
+                                            <span class="percent">77%</span>
+                                        </div>
+                        </div>
+
+                        <span class="txt-info">
+                            <strong>
+                                2021.11.03 
+                                <span>개봉</span>
+                                
+                            </strong>
+                        </span>
+                        <span class="like"> 
+                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20027683&MOVIE_CD_GROUP=20027683">예매</a>
+                        </span>
+                    </div>    
+                </li>
+            
+                <li>
+                    <div class="box-image" >
+                        <strong class="rank">No.2</strong>  
+                        <a href="/movies/detail-view/?midx=84945">
+                            <span class="thumb-image">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84945/84945_320.jpg" alt="듄 포스터" onerror="errorImage(this)"/>
+                                <span class="ico-grade grade-12">12세 이상</span>
+                            </span>
+                            
+                        </a>
+                        <span class="screentype">
+                            
+                        </span>
+                    </div>
+                    
+                    <div class="box-contents">
+                        <a href="/movies/detail-view/?midx=84945">
+                            <strong class="title">듄</strong>
+                        </a>
+
+                        <div class="score">
+                            <strong class="percent">예매율<span>10.1%</span></strong>
+                            <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위1~ 3위)-->
+                            <div class="egg-gage small">
+                                            <span class="egg great"></span>
+                                            <span class="percent">92%</span>
+                                        </div>
+                        </div>
+
+                        <span class="txt-info">
+                            <strong>
+                                2021.10.20 
+                                <span>개봉</span>
+                                
+                            </strong>
+                        </span>
+                        <span class="like"> 
+                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20027588&MOVIE_CD_GROUP=20027588">예매</a>
+                        </span>
+                    </div>    
+                </li>
+            
+                <li>
+                    <div class="box-image" >
+                        <strong class="rank">No.3</strong>  
+                        <a href="/movies/detail-view/?midx=84690">
+                            <span class="thumb-image">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84690/84690_320.jpg" alt="베놈 2-렛 데어 비 카니지 포스터" onerror="errorImage(this)"/>
+                                <span class="ico-grade grade-15">15세 이상</span>
+                            </span>
+                            
+                        </a>
+                        <span class="screentype">
+                            
+                                <a class="screenx" href="#" title="SCREENX 상세정보 바로가기" data-regioncode="SCX">SCREENX</a>
+                            
+                        </span>
+                    </div>
+                    
+                    <div class="box-contents">
+                        <a href="/movies/detail-view/?midx=84690">
+                            <strong class="title">베놈 2-렛 데어 비 카니지</strong>
+                        </a>
+
+                        <div class="score">
+                            <strong class="percent">예매율<span>1.1%</span></strong>
+                            <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위1~ 3위)-->
+                            <div class="egg-gage small">
+                                            <span class="egg good"></span>
+                                            <span class="percent">79%</span>
+                                        </div>
+                        </div>
+
+                        <span class="txt-info">
+                            <strong>
+                                2021.10.13 
+                                <span>개봉</span>
+                                
+                            </strong>
+                        </span>
+                        <span class="like"> 
+                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20026932&MOVIE_CD_GROUP=20026932">예매</a>
+                        </span>
+                    </div>    
+                </li>
+            
+            </ol>
+
+            <ol>
+            
+                <li>
+                    <div class="box-image" >
+                        <strong class="rank">No.4</strong>  
+                        <a href="/movies/detail-view/?midx=85038">
+                            <span class="thumb-image">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85038/85038_320.jpg" alt="퍼스트 카우 포스터" onerror="errorImage(this)"/>
+                                <span class="ico-grade grade-12">12세 이상</span>
+                            </span>
+                        </a>
+                        <span class="screentype">
+                            
+                                <a class="arthouse" href="#" data-regioncode="MovieCollage">아트하우스</a>
+                            
+                        </span>
+                    </div>
+                    
+                    <div class="box-contents">
+                        <a href="/movies/detail-view/?midx=85038">
+                            <strong class="title">퍼스트 카우</strong>
+                        </a>
+
+                        <div class="score">
+                            <strong class="percent">예매율<span>1.0%</span></strong>
+                            <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
+                            <div class="egg-gage small">
+                                            <span class="egg great"></span>
+                                            <span class="percent">94%</span>
+                                        </div>
+                        </div>
+
+                        <span class="txt-info">
+                            <strong>
+                                2021.11.04 
+                                <span>개봉</span>
+                                
+                            </strong>
+                        </span>
+                        <span class="like"> 
+                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20027807&MOVIE_CD_GROUP=20027807">예매</a>
+                        </span>
+                    </div>    
+                </li>
+            
+                <li>
+                    <div class="box-image" >
+                        <strong class="rank">No.5</strong>  
+                        <a href="/movies/detail-view/?midx=84906">
+                            <span class="thumb-image">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84906/84906_320.jpg" alt="빌리 홀리데이 포스터" onerror="errorImage(this)"/>
+                                <span class="ico-grade grade-19">청소년 관람불가</span>
+                            </span>
+                        </a>
+                        <span class="screentype">
+                            
+                                <a class="arthouse" href="#" data-regioncode="MovieCollage">아트하우스</a>
+                            
+                        </span>
+                    </div>
+                    
+                    <div class="box-contents">
+                        <a href="/movies/detail-view/?midx=84906">
+                            <strong class="title">빌리 홀리데이</strong>
+                        </a>
+
+                        <div class="score">
+                            <strong class="percent">예매율<span>0.8%</span></strong>
+                            <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
+                            <div class="egg-gage small">
+                                            <span class="egg great"></span>
+                                            <span class="percent">92%</span>
+                                        </div>
+                        </div>
+
+                        <span class="txt-info">
+                            <strong>
+                                2021.11.04 
+                                <span>개봉</span>
+                                
+                            </strong>
+                        </span>
+                        <span class="like"> 
+                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20028140&MOVIE_CD_GROUP=20027505">예매</a>
+                        </span>
+                    </div>    
+                </li>
+            
+                <li>
+                    <div class="box-image" >
+                        <strong class="rank">No.6</strong>  
+                        <a href="/movies/detail-view/?midx=84999">
+                            <span class="thumb-image">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84999/84999_320.jpg" alt="세버그 포스터" onerror="errorImage(this)"/>
+                                <span class="ico-grade grade-15">15세 이상</span>
+                            </span>
+                        </a>
+                        <span class="screentype">
+                            
+                        </span>
+                    </div>
+                    
+                    <div class="box-contents">
+                        <a href="/movies/detail-view/?midx=84999">
+                            <strong class="title">세버그</strong>
+                        </a>
+
+                        <div class="score">
+                            <strong class="percent">예매율<span>0.6%</span></strong>
+                            <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
+                            <div class="egg-gage small">
+                                            <span class="egg great"></span>
+                                            <span class="percent">86%</span>
+                                        </div>
+                        </div>
+
+                        <span class="txt-info">
+                            <strong>
+                                2021.11.04 
+                                <span>개봉</span>
+                                
+                            </strong>
+                        </span>
+                        <span class="like"> 
+                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20027660&MOVIE_CD_GROUP=20027660">예매</a>
+                        </span>
+                    </div>    
+                </li>
+            
+                <li>
+                    <div class="box-image" >
+                        <strong class="rank">No.7</strong>  
+                        <a href="/movies/detail-view/?midx=85047">
+                            <span class="thumb-image">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85047/85047_320.jpg" alt="아네트 포스터" onerror="errorImage(this)"/>
+                                <span class="ico-grade grade-15">15세 이상</span>
+                            </span>
+                        </a>
+                        <span class="screentype">
+                            
+                                <a class="arthouse" href="#" data-regioncode="MovieCollage">아트하우스</a>
+                            
+                        </span>
+                    </div>
+                    
+                    <div class="box-contents">
+                        <a href="/movies/detail-view/?midx=85047">
+                            <strong class="title">아네트</strong>
+                        </a>
+
+                        <div class="score">
+                            <strong class="percent">예매율<span>0.6%</span></strong>
+                            <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
+                            <div class="egg-gage small">
+                                            <span class="egg good"></span>
+                                            <span class="percent">77%</span>
+                                        </div>
+                        </div>
+
+                        <span class="txt-info">
+                            <strong>
+                                2021.10.27 
+                                <span>개봉</span>
+                                
+                            </strong>
+                        </span>
+                        <span class="like"> 
+                            <a class="link-reservation" href="/ticket/?MOVIE_CD=20027838&MOVIE_CD_GROUP=20027838">예매</a>
+                        </span>
+                    </div>    
+                </li>
+            
+            </ol>
+            
+            <button class="btn-more-fontbold">더보기 <i class="link-more">더보기</i></button>
+            
+
+            <ol id="movie_more_container" style="display:none" class="list-more">
+                <li></li>
+            </ol>
+
+            <div class="chart-ad">
+                <div class="box-com">                    
+                    <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@Movie_Chart" width="160" height="300" frameborder="0" scrolling="no" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" ID="Movie_Chart" NAME="Movie_Chart"></iframe>
+                </div>                
+                <div class="chart_ad_desc">
+                    <dl>
+                        <dt>
+                            <img src="http://img.cgv.co.kr/R2014/images/ad/ico_ad1.png" alt="ad"/>
+                            <span id="ad_txt1"></span>
+                        </dt>
+                        <dd>
+                            <span id="ad_txt2"></span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        `;
+
+        let regex = /img src="(.+?)".*?"title">(.+?)<.*?예매율<span>(.+?)<\/span>/gs;
+
+        document.write("<table border=1>");
+        document.write("<tr>");
+        document.write(`<td colspan="3">현재상영작`);
+        document.write("</tr>");
+        document.write("<tr>");
+        document.write("<td>영화<td>제목<td>예매율");
+        document.write("</tr>");
+        while((rs = regex.exec(str)) != null) {
+            document.write(`<tr><td id="td-img"><img src=`+rs[1]+`><td>`+rs[2]+`<td>`+rs[3]);
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

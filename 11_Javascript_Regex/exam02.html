@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="exam01.html" id="inputform">
+        <input type="text" id="id" placeholder="사용할 ID를 입력하세요">
+        <input type="text" id="phone" placeholder="핸드폰 번호를 입력하세요">
+        <input type="submit">
+    </form>
+    <script>
+        let frm = document.getElementById("inputform");
+
+        frm.onsubmit = function(){ //제출하려고 할때
+            
+            let phoneval = document.getElementById("phone").value;
+            let phoneRegex = /^010-?\d{4}-?\d{4}$/g;
+            let result = phoneRegex.test(phoneval);
+
+            if(!result){
+                alert("전화번호를 다시 확인해주세요.");
+                return false;
+            }
+
+        }
+    </script>
+
+</body>
+</html>

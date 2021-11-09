@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <form action="exam01.html" id="form">
+        <input type="text" id="id" placeholder="id를 입력하세요.">
+        <br>
+        <input type="text" id="phone" placeholder="휴대폰 번호를 입력하세요">
+        <br>
+        <input type="submit" id="submit" >
+    </form> 
+
+    <script>
+        let form = document.getElementById("form");
+        let id = document.getElementById("id");
+        let phone = document.getElementById("phone");
+        
+        form.onsubmit = function(){
+            let regex = /^[a-z][a-z0-9]{5,9}$/g;
+            let result = regex.test(id.value);
+            let phoneRegex = /^010-?\d{4}-?\d{4}$/g;
+            let phoneResult = phoneRegex.test(phone.value);
+
+            if(result&&phoneResult){
+                
+            }else if(!result){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'id를 다시 확인해주세요',
+                    footer: '6~10자 이하로 다시 쓰세요'
+                })
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>
