@@ -8,16 +8,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         *{box-sizing: border-box; padding: 1px; font-weight: bold;}
-        .container{width: 800px;}
-        div{border: 1px solid black;margin: auto; }
+        .container{width: 700px;}
+        div{border: 1px solid black;margin: auto;}
+        
         .stext{width: 50%;}
         .num{width: 20%;}
         .ltext{width: 100%;}
         .col1{text-align: right;margin: auto;padding-left: 1px;padding-right: 1px;margin: 0px;line-height: 30px;}
         .col2{text-align: center;}
-        .col3{padding-left: 1px;padding-right: 1px;}
+        .col3{padding-left: 1px;padding-right: 1px; margin: 0px; line-height: 30px;}
         #div>*{float: left;}
         #div1,#div2{border: 0px;}
         
@@ -27,14 +29,14 @@
     </script>
 </head>
 <body>
-    <form action="success.html" method="post">
+    <form action="success.html" method="get" id="frm">
         <div class="container">
             <div class="row">
                 <div class="col-12 col2">회원 가입 정보</div>
             </div>
             <div class="row">
                 <div class="col-4 col1">아이디 :</div>
-                <div class="col-8 col3"><input type="text" class="stext"> <button>중복확인</button></div>
+                <div class="col-8 col3"><input type="text" class="stext" id="id"> <button>중복확인</button></div>
             </div>
             <div class="row">
                 <div class="col-4 col1">패스워드 :</div>
@@ -46,7 +48,14 @@
             </div>
             <div class="row">
                 <div class="col-4 col1">이름 :</div>
-                <div class="col-8 col3"><input type="text" class="stext"></div>
+                <div class="col-8 col3"><input type="text" class="stext" id="name"></div>
+            </div>
+            <div class="row">
+                <div class="col-4 col1">성별 :</div>
+                <div class="col-8 col3">
+                    <input type="radio" name="lang" id="person">M
+                    <input type="radio" name="lang" id="person">W
+                </div>   
             </div>
             <div class="row">
                 <div class="col-4 col1">전화번호 :</div>
@@ -60,11 +69,11 @@
                         <option value='7'>080</option>
                     </select>
                     </td>
-                    </tr> - <input type="text" class="num"> - <input type="text" class="num"></div>
+                    </tr> - <input type="text" class="num" id="num1"> - <input type="text" class="num" id="num2"></div>
             </div>
             <div class="row">
                 <div class="col-4 col1">이메일 :</div>
-                <div class="col-8 col3"><input type="text" class="stext"></div>
+                <div class="col-8 col3"><input type="text" class="stext" id="email"></div>
             </div>
             <div class="row">
                 <div class="col-4 col1">우편번호 :</div>
@@ -79,17 +88,23 @@
                 <div class="col-8 col3"><input type="text" id="detailAddress" placeholder="상세주소"></div>
             </div>
             <div class="row">
-                <div class="col-12 col2"><button>회원가입</button> <button>다시 입력</button></div>
+                <div class="col-12 col2"><button type="submit">회원가입</button> <button type="reset">다시 입력</button></div>
             </div>
     </form>
     </div>
 
     <script>
+        let frm = document.getElementById("frm");
+        let id = document.getElementById("id");
         let pw = document.getElementById("pw");
         let repw = document.getElementById("repw");
+        let name = document.getElementById("name");
+        let person = document.getElementById("person");
+        let num1 = document.getElementById("num1");
+        let num2 = document.getElementById("num2");
+        let email = document.getElementById("email");
         let div1 = document.getElementById("div1");
         let div2 = document.getElementById("div2");
-
         repw.onkeyup = function(){
             if(pw.value == repw.value){
                 div2.innerHTML = "패스워드가 일치합니다.";
@@ -110,6 +125,54 @@
             }
         }
 
+        frm.onsubmit = function(){
+            let idregex = /[a-z][a-z0-9]{5,13}/g;
+            let idresult = idregex.test(id.value);
+            if(!idresult){
+                alert("아이디를 제대로 입력해주세요.")
+                return false;
+            }
+
+            let pwregex = /.{8}/g;
+            let pwresult = pwregex.test(pw.value);
+            if(!pwresult){
+                alert("비밀번호 요건에 충족하지 않습니다. 8자 이상 입력해주세요.")
+                return false;
+            }
+
+            let nameregex = /^[가-힣]{2,5}$/g;
+            let nameresult = nameregex.test(name.value);
+            if(!nameresult){
+                alert("잘못된 이름입니다. 다시 입력해주세요.")
+                return false;
+            }
+            
+            if($("#frm input[type=radio]:checked").length==0){
+                alert("한가지는 반드시 선택해야 합니다.")
+                return false;
+            }
+
+            let numregex = /^[0-9]{4}$/; //포인터 위치 때문에 전화번호를 두번 검사하려면g옵션을 빼야함
+            let num1result = numregex.test(num1.value);
+            if(!num1result){
+                alert("전화번호가 잘못되었습니다. 다시 입력해주세요.")
+                return false;
+            }
+            
+            let num2result = numregex.test(num2.value);
+            if(!num2result){
+                alert("전화번호가 잘못되었습니다. 다시 입력해주세요.")
+                return false;
+            }
+            
+            let eamilregex = /^.+?@.+?.\.com$/g;
+            let emailresult = eamilregex.test(email.value);
+            if(!emailresult){
+                alert("이메일 형식이 잘못되었습니다. 다시 입력해주세요.")
+                return false;
+            }
+
+        }
         function execDaumPostcode() {
         new daum.Postcode({
             oncomplete: function(data) {
@@ -127,6 +190,13 @@
                 document.getElementById("detailAddress").focus();
             }
         }).open();
+        
+
+
+
+        
+
+        
     }
     </script>
 
