@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        *{margin: auto;}
+        .box{width: 300px;height: 300px; border: 1px solid black; overflow: auto;}
+        .btn{text-align: center;height: 50px;line-height: 50px;}
+    </style>
+</head>
+<body>
+    <div class="box" id="box" data-num=400>
+       
+    </div>
+    <div class="btn">
+    <input type="button" value="위로 추가 하기" id="upbtn">
+    <input type="button" value="아래로 추가 하기" id="dnbtn">
+    </div>
+
+    <script>
+        function updateScroll(){ //내용 업데이트 됐을 때 스크롤이 아래쪽에 고정되있도록 하는 함수
+            var element = document.getElementById("box");
+            element.scrollTop = element.scrollHeight;
+        }
+
+        let box = $("#box");
+        
+        let upbtn = $("#upbtn");
+        let dnbtn = $("#dnbtn");
+        let count = 1;
+       
+        upbtn.on("click",function(){
+            let msg = $("<div>");
+            msg.addClass("msg");
+            msg.attr("style","background-color:salmon")
+            msg.append("Contents Message Here :"+count++);
+            box.prepend(msg);
+            updateScroll();
+        })
+
+        dnbtn.on("click",function(){
+            let msg = $("<div>");
+            msg.addClass("msg");
+            msg.attr("style","background-color:salmon")
+            msg.append("Contents Message Here :"+count++);
+            box.append(msg);
+            updateScroll();
+        })
+
+        $('#box').scrollTop($('#box')[0].scrollHeight);
+    </script>
+</body>
+</html>

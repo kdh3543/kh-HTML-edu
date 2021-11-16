@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        *{box-sizing: border-box;}
+        div{border: 1px solid black; margin: auto;}
+        .write{width: 500px;height: 130px;}
+        .header{width: 100%; height: 30px; background-color: gray;}
+        .main{width: 100%;height: 100px;}
+        .main>*{float: left;}
+        #name{height: 30px;}
+        #msg{width: 80%;height: 100px;}
+        #btn{width: 20%;height: 100px;}
+        .getwrite{width: 500px; border: none;}
+        .getwrite>*{float: left;}
+       
+    </style>
+</head>
+<body>
+    <div class="write">
+        <div class="header">
+            <input type="text" placeholder="작성자명을 입력해주세요." id="name">
+        </div>
+        <div class="main">
+            <div contenteditable="true" id="msg"></div>
+            <button id="btn">Reply</button>
+        </div>
+    </div>
+    <hr>
+    <div class="getwrite" id="getwrite">
+       
+    </div>
+
+    <script>
+        let name = $("#name");
+        let msg = $("#msg");
+        let btn = $("#btn");
+        let getwrite = $("#getwrite");
+
+        btn.on("click",function(){
+            let content = $("<div>");
+            content.addClass("content");
+            content.css({
+                "width":"80%",
+                "height":"100px",
+                "padding":"5px"
+            })
+            
+            let getname = $("<p>");
+            getname.addClass("getname");
+            getname.append(name.val());
+            getname.css({
+                "width":"100%",
+                "height":"20px",
+                "border":"1px solid black",
+                "margin":"0px",
+              
+            })
+            
+            let getmsg = $("<div>");
+            getmsg.addClass("getmsg");
+            getmsg.append(msg.html());
+            getmsg.css({
+                "width":"100%",
+                "height":"65px",
+                "border":"none"
+            })
+            content.append(getname);
+            content.append(getmsg);
+
+            let del = $("<div>");
+            del.addClass("del");
+            del.css({
+                "width":"20%",
+                "height":"100px",
+                "line-height":"100px",
+                "text-align":"center"
+            })
+            let delbtn = $("<button>");
+            delbtn.addClass("delbtn");
+            delbtn.append("삭제");
+
+            del.append(delbtn);
+
+            getwrite.append(content);
+            getwrite.append(del);
+        })
+
+        getwrite.on("click",".delbtn",function(){
+            $(this).parent().prev().remove();
+            $(this).parent().remove();
+        })
+    </script>
+</body>
+</html>

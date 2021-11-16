@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style>
+        #files{
+            width: 300px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button id="addFile">add</button><!--<button id="delFile">remove</button>-->
+    <fieldset id="files">
+        <legend>Files</legend>
+    </fieldset>
+
+    <script>
+        $("#addFile").on("click",function(){
+
+            let line = $("<div>");
+            
+
+            let newFile = $("<input type=file>")
+            $("#files").append(newFile);
+
+            let delButton = $("<button>");
+            delButton.addClass("btnDel");
+            // 1번째 방법(버튼을 추가하면서 그 버튼에 대한 동적요소를 부여)
+            delButton.on("click",function(){
+
+            })
+
+            delButton.text("X");
+
+            line.append(newFile);
+            line.append(delButton);
+
+            $("#files").append(line);
+        })
+        // 2번째 방법(버튼에 대해 부모중에 고정된 요소를 불러 그 안에 btnDel 클래스를 불러오면 동적 binding이 됨)
+       
+        $("#files").on("click",".btnDel",function(){
+            $(this).parent().remove();
+        })
+        
+    </script>
+</body>
+</html>

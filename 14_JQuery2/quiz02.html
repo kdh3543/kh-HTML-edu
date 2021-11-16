@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>제목: <input type="text" id="title"></td>
+        </tr>
+        <tr>
+            <td>내용: <input type="text" id="content"></td>
+        </tr>
+        <tr>
+            <td>작성자: <input type="text" id="writer"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="테이블에 추가" id="btn"></td>
+        </tr>
+        <tr>
+            <td>
+                <table border="1" id="table">
+                    <tr>
+                        <td>제목</td>
+                        <td>내용</td>
+                        <td>작성자</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        let title = $("#title");
+        let content = $("#content");
+        let writer = $("#writer");
+        let btn = $("#btn");
+        let table = $("#table");
+
+        btn.on("click", function(){
+            let tr = $("<tr>");
+            let td1 = $("<td>");
+            td1.append(title.val());
+            let td2 = $("<td>");
+            td2.append(content.val());
+            let td3 = $("<td>");
+            td3.append(writer.val());
+            
+            tr.append(td1);
+            tr.append(td2);
+            tr.append(td3);
+            table.append(tr);
+            
+        })
+
+    </script>
+</body>
+</html>

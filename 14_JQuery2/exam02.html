@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        div{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div>
+        <p id="pdi1">Data1</p><button id="btn">x1</button>
+        </div>
+        <div>
+        <p id="pdi2">Data2</p><button>x2</button>
+        </div>
+        <div>
+        <p id="pdi3">Data3</p><button>x3</button>
+        </div>
+        <div>
+        <p id="pdi4">Data4</p><button>x4</button>
+        </div>
+        <div>
+        <p id="pdi5">Data5</p><button>x5</button>
+        </div>
+    </div>
+
+    <script>
+       $("button").on("click",function(){
+           //$(this).prev().remove();
+            //$(this).parent().remove();
+           $("#wrap").children()[0].remove();
+       })
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <p class="title">This is title</p>
+                <ul class="fruits">
+                    <li class="fruit">Apple</li>
+                    <li class="fruit">Orange</li>
+                    <li class="fruit">Grape</li>
+                </ul>
+            </div>
+            <div class="body">
+                <p class="body_title">This is title</p>
+                <ul class="fruits">
+                    <li class="fruit test">Apple</li>
+                    <li class="fruit">Orange</li>
+                    <li class="fruit">Grape</li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            // header Apple을 green으로 변경
+            $(".header").find(".fruit").first().css("background-color","green");
+            console.log($($(".header .fruit li")[0]).css("background-color","pink"))
+
+            // header apple에 글씨 pink 색깔 적용
+            $(".fruit.test").closest(".container").children(".header").find(".fruit").first().css("color","pink");
+            console.log($($(".fruit.test").closest(".contaier").find(".fruit")[0]).css("color","violet"));
+
+            // header의 orange와 grape사이에 mango 넣기            
+            //$(".fruit.test").closest(".container").children(".header").find(".fruit").first().next().append("<li>Mango</li>");
+
+            let mango = $("<li>");
+            mango.addClass("fruit");
+            mango.text("Mango");
+            $($(".fruit.test").closest(".container").children(".header").find(".fruit")[2]).before(mango);
+        </script>
+    </body>
+</html>

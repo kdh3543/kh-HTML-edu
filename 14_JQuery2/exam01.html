@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #wrapper{
+            width: 200px;
+            border: 1px solid black;
+        }
+        .item{width: 100px;height: 100px;}
+        .item img{height: 90%;}
+        .item .desc{height: 10%;}
+    </style>
+
+</head>
+<body>
+    <div id="wrapper">
+        내용<br>
+    </div>
+
+    <script>
+        let wrapper = $("#wrapper");
+
+        let item = $("<div>");
+        item.addClass("item");
+
+        let itemImg = $("<div>");
+        itemImg.addClass("itemImg");
+        let img = $("<img>");
+        img.attr("src","abc.jpg");
+
+        let desc = $("<div>");
+        desc.addClass("desc");
+        desc.append("어쩌라고~");
+
+        item.append(itemImg);
+        item.append(desc);
+        itemImg.append(img);
+
+        wrapper.append(item);
+       
+       
+        // $("#wrapper").prepend(`<div class=item>
+        //     <div class='img'>
+        //         <img src='abc.jpg'>
+        //         </div>
+        //         <div class='desc'>
+        //             어쩔~?
+        //         </div>
+        //     </div>`);
+        
+    </script>
+</body>
+</html>

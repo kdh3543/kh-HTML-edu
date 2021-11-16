@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 200px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Box</div>
+    <button id="hide">Hide</button><button id="show">Show</button>
+</body>
+
+<script>
+    // $("#hide").on("click",function(){
+    //     $(".box").hide(1000);
+    // })
+    // $("#show").on("click",function(){
+    //     $(".box").show(1000);
+    // })
+
+    // $("#hide").on("click",function(){
+    //     $(".box").slideUp(1000);
+    // })
+    // $("#show").on("click",function(){
+    //     $(".box").slideDown(1000);
+    // })
+
+    $("#hide").on("click",function(){
+        $(".box").fadeOut(1000);
+    })
+    $("#show").on("click",function(){
+        $(".box").fadeIn(1000);
+    })
+</script>
+</html>
